@@ -1,6 +1,6 @@
 package OOP_00000119273_SteventRichardoPutra.week01
 
-fun main(args: Array<String>) {
+fun main() {
     val radius = 7.0
     val pi = 3.14
     var area = pi * radius * radius

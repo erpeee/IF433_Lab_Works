@@ -1,4 +1,4 @@
-package OOP_00000119273_SteventRichardoPutra.week01
+package oop_00000119273_SteventRichardoPutra.week01
 
 fun main() {
     val gameTitle : String

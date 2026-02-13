@@ -1,10 +1,6 @@
-package oop_0000119273_SteventRichardoPutra.week02
+package oop_00000119273_SteventRichardoPutra.week02
 
-class Student(
-    val name: String,
-    val nim: String,
-    val major: String
-){
+class Student(val name: String, val nim: String, var major: String) {
     init {
         if (nim.length != 5) {
             println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!")

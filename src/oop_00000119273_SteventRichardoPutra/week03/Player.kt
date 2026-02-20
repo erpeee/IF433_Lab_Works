@@ -1,6 +1,6 @@
 package oop_00000119273_SteventRichardoPutra.week03
 
-class Player(username: String){
+class Player(val username: String){
     private var xp: Int = 0
 
     val level: Int
@@ -20,3 +20,15 @@ class Player(username: String){
     }
 }
 
+fun main() {
+    val player = Player("Stevent")
+
+    println("--- Menambah 50 XP ---")
+    player.addXp(50)
+    println("Current Level: ${player.level}")
+
+    println("\n--- Menambah 60 XP ---")
+    player.addXp(60)
+
+    println("Current Level: ${player.level}")
+}

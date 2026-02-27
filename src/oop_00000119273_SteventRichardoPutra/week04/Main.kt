@@ -17,4 +17,13 @@ fun main() {
     mobilListrik.openTrunk()
     mobilListrik.honk()
     mobilListrik.accelerate()
+
+    println("--- Tugas Mandiri ---")
+    val myManager = Manager("Udin", 5000000)
+    println("Manager ${myManager.name} di gaji dengan Rp. ${myManager.baseSalary}, mendapatkan bonus Rp. ${myManager.calculateBonus()}")
+    myManager.work()
+    val myDeveloper = Developer("Budi", 10000000, "Python")
+    println("${myDeveloper.name} bekerja dan digaji Rp. ${myDeveloper.baseSalary}. Bonus nya adalah Rp. ${myDeveloper.calculateBonus()}")
+    myDeveloper.work()
+
 }

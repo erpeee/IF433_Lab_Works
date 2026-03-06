@@ -22,4 +22,10 @@ fun main() {
         }
         println("-------------------------")
     }
+
+    val math = MathHelper()
+    println(math.hitungLuas(20))
+    println(math.hitungLuas(10,10))
+    println(math.hitungLuas(3.20))
+
 }

@@ -7,7 +7,7 @@ class CreditCard(accountName: String, val limit: Double): PaymentMethod(accountN
             usedAmount += amount
             println("[$accountName - Credit Card] Sukses! Transaksi sebesar Rp$amount diterima. Sisa limit: Rp${limit - usedAmount}")
         }else {
-            println("[$accountName - Credit Card] Transaksi ditolak: Melebihi Limit.)
+            println("[$accountName - Credit Card] Transaksi ditolak: Melebihi Limit.")
         }
     }
 }

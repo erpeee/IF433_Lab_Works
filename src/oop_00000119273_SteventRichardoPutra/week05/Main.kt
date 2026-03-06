@@ -28,13 +28,20 @@ fun main() {
     println(math.hitungLuas(10,10))
     println(math.hitungLuas(3.20))
 
-    val wallet = EWallet(50000)
-    val credit = CreditCard(100000)
+    val wallet = EWallet("Budi", 50000.0)
+    val credit = CreditCard("Budi", 50000.0)
 
     val paymentList: List<PaymentMethod> = listOf(wallet, credit)
 
     for (payment in paymentList){
         println("--- Memproses Pembayaran untuk ${payment.accountName} ---")
-        payment.processPayment(75000)
+        payment.processPayment(75000.0)
+
+        if (payment is EWallet){
+            println("E-Wallet terdeteksi: Melakukan top-up otomatis.")
+            payment.topUp(50000.0)
+            payment.processPayment(75000.0)
+        }
+        println()
     }
 }

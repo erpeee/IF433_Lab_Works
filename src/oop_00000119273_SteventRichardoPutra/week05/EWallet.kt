@@ -1,6 +1,6 @@
 package oop_00000119273_SteventRichardoPutra.week05
 
-class EWallet(var balance: Double) : PaymentMethod(accountName)  {
+class EWallet(accountName: String, var balance: Double) : PaymentMethod(accountName)  {
     override fun processPayment(amount: Double) {
         if(balance >= amount){
             balance -= amount
@@ -8,9 +8,9 @@ class EWallet(var balance: Double) : PaymentMethod(accountName)  {
         } else{
             println("[$accountName - E-Wallet] Transaksi Gagal : Saldo anda tidak cukup.")
         }
-        fun topUp(amount:Double){
-            balance += amount
-            println("[$accountNam - E-Wallet] Top Up berhasil!, Saldo sekarang: Rp$balance")
-        }
+    }
+    fun topUp(amount:Double) {
+        balance += amount
+        println("[$accountName - E-Wallet] Top Up berhasil!, Saldo sekarang: Rp$balance")
     }
 }

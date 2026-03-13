@@ -20,8 +20,17 @@ fun main(){
     processCheckout(pay2, 150000.0)
 
     println("\n--- Smart Device Testing---")
-    val myHub = SmartHomeHub
+    val myHub = SmartHomeHub()
     val myLamp = SmartLamp("L-001", "Ruang Tamu")
     val mySpeaker = SmartSpeaker("S-002", "Google Nest Dapur")
     val myCCTV = SmartCCTV("C-003","Ezviz Garasi")
+
+    println("\n=== Inisialisasi Smart Home System ===")
+    myHub.addDevice(myLamp)
+    myHub.addDevice(mySpeaker)
+    myHub.addDevice(myCCTV)
+
+    myHub.activateSecurityMode()
+
+    myHub.turnOffAllSwitches()
 }

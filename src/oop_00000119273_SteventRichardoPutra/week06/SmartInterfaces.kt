@@ -1,6 +1,6 @@
 package oop_00000119273_SteventRichardoPutra.week06
 
-interface SmartInterfaces {
+interface SmartDevice {
     val id: String
     val name: String
 }

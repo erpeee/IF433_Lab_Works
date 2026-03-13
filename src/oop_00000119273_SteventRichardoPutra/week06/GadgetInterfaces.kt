@@ -1,7 +1,7 @@
 package oop_00000119273_SteventRichardoPutra.week06
 
 interface Camera {
-    fun turnOon() { println("Lensa kamera terbuka dan sensor aktif.")}
+    fun turnOn() { println("Lensa kamera terbuka dan sensor aktif.")}
 }
 
 interface Phone {

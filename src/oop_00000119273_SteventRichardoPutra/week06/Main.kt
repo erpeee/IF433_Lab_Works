@@ -18,4 +18,5 @@ fun main(){
     println("\n=== TESTING CHECKOUT ===")
     processCheckout(pay1, 50000.0)
     processCheckout(pay2, 150000.0)
+
 }

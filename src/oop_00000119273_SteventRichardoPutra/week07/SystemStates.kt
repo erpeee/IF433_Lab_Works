@@ -3,3 +3,9 @@ package oop_00000119273_SteventRichardoPutra.week07
 enum class SystemStates {
     STARTING, RUNNING, STOPPPED
 }
+
+sealed class ApiResponse {
+    data class Success(val data: DataUser) : ApiResponse()
+    data class Error(val message: String) : ApiResponse()
+    object Loading : ApiResponse()
+}

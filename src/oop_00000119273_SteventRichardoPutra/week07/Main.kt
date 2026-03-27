@@ -35,5 +35,13 @@ fun main(){
 
     println("\n=== Testing Singleton ===")
     GameManager.startGame()
-    GameManager.startGame()
+
+    println("\n=== Test Rarity ===")
+    println("Drop chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    println("\n=== Testing Forging ===")
+    val myWeapon = WeaponForge.forgeStarterSword()
+    println("Senjata awal: ${myWeapon.item.name} dengan durability ${myWeapon.durability}")
+    val upgradedItem = myWeapon.item.copy("Pedang Exca Modif", 25)
+    println("Senjata setelah di upgrade\n${upgradedItem.name}, damage ${upgradedItem.damage}")
 }

@@ -43,5 +43,10 @@ fun main(){
     val myWeapon = WeaponForge.forgeStarterSword()
     println("Senjata awal: ${myWeapon.item.name} dengan durability ${myWeapon.durability}")
     val upgradedItem = myWeapon.item.copy("Pedang Exca Modif", 25)
-    println("Senjata setelah di upgrade\n${upgradedItem.name}, damage ${upgradedItem.damage}")
+
+    println("\n=== Gameplay ===")
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }

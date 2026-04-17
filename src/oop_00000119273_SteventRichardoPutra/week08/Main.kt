@@ -1,6 +1,6 @@
 package oop_00000119273_SteventRichardoPutra.week08
 
-fun main {
+fun main() {
     println("=== Test Safe Calls & Elvis ===")
     val emptyOrder = Order(null, null)
 
@@ -34,5 +34,13 @@ fun main {
 
     val someObject: Any = 100
     val safeString = someObject as? String ?: "Unknown String"
-    println("Hasil cast + fallback: $safeString)
+    println("Hasil cast + fallback: $safeString")
+
+    println("\n=== TEST THE RED BUTTON (!!) ===")
+    val toxicData: String? = null
+    try {
+        val length = toxicData!!.length
+    } catch (e: NullPointerException) {
+        println("CRASH (NPE)! Jangan gunakan !! secara sembarangan.")
+    }
 }

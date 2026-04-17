@@ -1,4 +1,4 @@
-package oop_00000119273_SteventRichardoPutra.week08
+package oop_00000119273_SteventRichardoPutra.week08;
 
 public class LegacyJavaAPI {
     public static String fetchServerStatus() {

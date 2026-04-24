@@ -28,5 +28,6 @@ fun main() {
     topPerformersString.forEach { baris ->
         println(baris)
     }
-
+    println("\n[Worst Performers]")
+    worstPerformersString.forEach { println(it) }
 }

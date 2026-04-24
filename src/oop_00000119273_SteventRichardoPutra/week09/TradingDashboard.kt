@@ -30,4 +30,7 @@ fun main() {
     }
     println("\n[Worst Performers]")
     worstPerformersString.forEach { println(it) }
+
+    println("\n[Unique Traded Pairs]")
+    println(uniquePairs.joinToString(", "))
 }

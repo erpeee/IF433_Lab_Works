@@ -4,9 +4,9 @@ fun main() {
     val homeDevices = mutableListOf<SmartDevice>()
 
     SmartDevice("", ""). apply {
-        name = "Philips WiZ Living Room",
-        category = "Lighting",
-        isOnline = true,
+        name = "Philips WiZ Living Room"
+        category = "Lighting"
+        isOnline = true
         powerLoad = 12
     }.also {
         homeDevices.add(it)
@@ -18,4 +18,12 @@ fun main() {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
+    val acInverter = run {
+        val device = SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
+        device
+    }
+    homeDevices.add(acInverter)
+
+    homeDevices.add(SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10))
+
 }

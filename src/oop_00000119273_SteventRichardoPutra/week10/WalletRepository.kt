@@ -9,4 +9,9 @@ class WalletRepository<T> {
     fun getAll(): List<T> {
         return items
     }
+    fun findByName(query: String): List<T> {
+        return items.filter {
+            it.toString().contains(query, ignoreCase = true)
+        }
+    }
 }

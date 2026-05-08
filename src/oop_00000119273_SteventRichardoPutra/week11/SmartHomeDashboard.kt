@@ -30,4 +30,7 @@ fun main() {
     searchResult?.let {
         println("Hasil Pencarian: ${it.diagnose()}")
     }
+    with(homeDevices){
+        println("Total perangkat di dashboard: ${this.size}")
+    }
 }

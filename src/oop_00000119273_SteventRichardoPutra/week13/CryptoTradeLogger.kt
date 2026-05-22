@@ -51,3 +51,5 @@ fun main() {
         TradeRecord(3, "SOLUSDT", "Long", 50.0, 15.8)
     )
     saveTrades(mockTrades, filePath)
+
+    File(filePath).appendText("CORRUPT_ID, DOGEUSDT, Hold, XX, YY\n")

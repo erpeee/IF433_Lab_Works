@@ -7,7 +7,7 @@ import java.io.FileNotFoundException
 data class TradeRecord(val id: Int, val symbol: String, val type: String, val margin: Double, val pnl: Double)
 
 fun TradeRecord.toCsv(): String {
-    return "$id, $symbol, $margin, $pnl"
+    return "$id, $symbol, $type, $margin, $pnl"
 }
 
 fun fromCsvTrade(line: String): TradeRecord? {
@@ -56,4 +56,10 @@ fun main() {
 
     val loadedData = loadTrades(filePath)
     val totalPnl = loadedData.sumOf { it.pnl }
+
+    println("\n--- Daftar Transaksi Valid ---")
+    loadedData.forEach { trade ->
+        println("ID: ${trade.id} | ${trade.symbol} (${trade.type}) | Margin: ${trade.margin} | PnL: ${trade.pnl}")
+    }
+    println("=== Total PnL Bersih: $totalPnl ===")
 }
